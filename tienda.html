@@ -60,11 +60,9 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Camisa a cuadros</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#c1">Open Modal</button>
                     </div>
                 </div>
             </div>
@@ -73,11 +71,9 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Camisa lisa</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#c2l">Open Modal</button>
                     </div>
                 </div>
             </div>
@@ -86,11 +82,9 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Camisa cuadro chico</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#c3">Open Modal</button>
                     </div>
                 </div>
             </div>
@@ -99,11 +93,9 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Chamarra</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#c4">Open Modal</button>
                     </div>
                 </div>
             </div>
@@ -111,11 +103,53 @@
         </div>
 
     </div>
-    
-    <div id="carrito" class="container">
-       <h1>Carrito de compras</h1>
+
+    <!-- Carrito de compras -->
+    <div class="container">
+        <h1>Carrito de compras</h1>
+        <div id="carrito" class="list-group">
+            <!--            <a href="#" class="list-group-item">Category 1</a>-->
+        </div>
     </div>
 
+    <!-- Camisa Cuadros -->
+    <div id="c1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Camisa a Cuadros</h4>
+                </div>
+                <div name="eltio" class="modal-body">
+                    <select name="puntos">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="slim">Slim</option>
+                    </select>
+                    <select name="color">
+                        <option value="Morado-cuadros">Morado-cuadros</option>
+                        <option value="Azul-cuadros">Azul-cuadros</option>
+                        <option value="Rojo-cuadros">Rojo-cuadros</option>
+                        <option value="Negra-cuadros">Negra-cuadros</option>
+                    </select>
+                    <select name="talla">
+                        <option value="Chica">Chica</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Grande">Grande</option>
+                        <option value="Extra Grande">Extra Grande</option>
+                    </select>
+                    <input style="width: 50px;" name="cantidad" type="number" placeholder="1">
+                </div>
+                <div class="modal-footer">
+                    <button name="Camisa a Cuadros" type="button" class="btn btn-default addItem" data-dismiss="modal">Agregar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <div class="container">
         <hr>
@@ -133,6 +167,22 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $('.addItem').click(function () {
+            var nom = $(this).attr('name');
+            var uncle = $(this).parent().prev();
+            var kids = $(uncle).children();
+            var puntos = $(kids[0]).val();
+            var color = $(kids[1]).val();
+            var talla = $(kids[2]).val();
+            var cantidad = $(kids[3]).val();
+
+            $('#carrito').append("<a href='#carrito' class='list-group-item'><strong>" + nom + ": " + "</strong>Puntos " + puntos + ", Color " +
+                color + ", Talla " + talla + ". Cantidad: " + cantidad + ".</a>");
+        });
+    </script>
+
 </body>
 
 </html>
