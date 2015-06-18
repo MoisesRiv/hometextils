@@ -73,7 +73,7 @@
                     <div class="caption">
                         <h3>Camisa lisa</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#c2l">Open Modal</button>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#c2">Open Modal</button>
                     </div>
                 </div>
             </div>
@@ -123,28 +123,75 @@
                     <h4 class="modal-title">Camisa a Cuadros</h4>
                 </div>
                 <div name="eltio" class="modal-body">
+                   <label for="puntos">Puntos: </label>
                     <select name="puntos">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="slim">Slim</option>
                     </select>
+                    <label for="color">Color: </label>
                     <select name="color">
                         <option value="Morado-cuadros">Morado-cuadros</option>
                         <option value="Azul-cuadros">Azul-cuadros</option>
                         <option value="Rojo-cuadros">Rojo-cuadros</option>
                         <option value="Negra-cuadros">Negra-cuadros</option>
                     </select>
+                    <label for="talla">Talla: </label>
                     <select name="talla">
                         <option value="Chica">Chica</option>
                         <option value="Mediana">Mediana</option>
                         <option value="Grande">Grande</option>
                         <option value="Extra Grande">Extra Grande</option>
                     </select>
+                    <label for="cantidad">Cantidad: </label>
                     <input style="width: 50px;" name="cantidad" type="number" placeholder="1">
                 </div>
                 <div class="modal-footer">
                     <button name="Camisa a Cuadros" type="button" class="btn btn-default addItem" data-dismiss="modal">Agregar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+        <!-- Camisa lisa -->
+    <div id="c2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Camisa a lisa</h4>
+                </div>
+                <div name="eltio" class="modal-body">
+                   <label for="puntos">Puntos: </label>
+                    <select name="puntos">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="slim">Slim</option>
+                    </select>
+                    <label for="color">Color: </label>
+                    <select name="color">
+                        <option value="Morado-cuadros">Morado-cuadros</option>
+                        <option value="Azul-cuadros">Azul-cuadros</option>
+                        <option value="Rojo-cuadros">Rojo-cuadros</option>
+                        <option value="Negra-cuadros">Negra-cuadros</option>
+                    </select>
+                    <label for="talla">Talla: </label>
+                    <select name="talla">
+                        <option value="Chica">Chica</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Grande">Grande</option>
+                        <option value="Extra Grande">Extra Grande</option>
+                    </select>
+                    <label for="cantidad">Cantidad: </label>
+                    <input style="width: 50px;" name="cantidad" type="number" placeholder="1">
+                </div>
+                <div class="modal-footer">
+                    <button name="Camisa a lisa" type="button" class="btn btn-default addItem" data-dismiss="modal">Agregar</button>
                 </div>
             </div>
 
